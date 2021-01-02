@@ -20,7 +20,7 @@ body {
   border-radius: 10px;
 }
 
-/* Card Top */
+/* Card Menu */
 
 .menu {
   display: flex;
@@ -55,9 +55,13 @@ body {
   padding: 10px;
 }
 
-/* Card Bottom */
+/* Card Storage */
 
 .storage {
+  position: relative;
+}
+
+.detail {
   background-color: hsl(228, 56%, 26%);
   color: hsl(243, 100%, 93%);
   text-align: center;
@@ -106,13 +110,16 @@ body {
 }
 
 .quota {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
   color: hsl(229, 7%, 55%);
   font-weight: 700;
-  margin-top: -35px;
   height: 70px;
   width: 175px;
 }
@@ -129,8 +136,66 @@ body {
   font-size: 11px;
   text-align: center;
   color: white;
-  margin-top: 10px;
+  margin-top: 50px;
 }
 .attribution a {
   color: hsl(335, 100%, 65%);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("./images/bg-desktop.png");
+    background-size: 100vw;
+    background-position: bottom;
+  }
+
+  .container {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 325px 1fr;
+    grid-template-rows: 200px;
+    column-gap: 25px;
+  }
+
+  /* Card Storage */
+
+  .detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .detail p {
+    margin-top: 0;
+  }
+
+  .quota {
+    z-index: 1;
+    top: 0;
+    left: auto;
+    right: 30px;
+    transform: none;
+    border-bottom-right-radius: 0;
+  }
+
+  .quota:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: white;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+  }
 }

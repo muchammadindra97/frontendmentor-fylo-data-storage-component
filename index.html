@@ -21,41 +21,45 @@
     <title>Frontend Mentor | Fylo data storage component</title>
   </head>
   <body>
-    <div class="card menu">
-      <img class="logo" src="./images/logo.svg" alt="logo" />
-      <div>
-        <div class="item">
-          <div class="item-icon">
-            <img src="./images/icon-document.svg" alt="icon-document" />
+    <div class="container">
+      <div class="card menu">
+        <img class="logo" src="./images/logo.svg" alt="logo" />
+        <div>
+          <div class="item">
+            <div class="item-icon">
+              <img src="./images/icon-document.svg" alt="icon-document" />
+            </div>
           </div>
-        </div>
-        <div class="item">
-          <div class="item-icon">
-            <img src="./images/icon-folder.svg" alt="icon-folder" />
+          <div class="item">
+            <div class="item-icon">
+              <img src="./images/icon-folder.svg" alt="icon-folder" />
+            </div>
           </div>
-        </div>
-        <div class="item">
-          <div class="item-icon">
-            <img src="./images/icon-upload.svg" alt="icon-upload" />
+          <div class="item">
+            <div class="item-icon">
+              <img src="./images/icon-upload.svg" alt="icon-upload" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="card storage">
-      <p>You’ve used <strong>815 GB</strong> of your storage</p>
-      <div class="bar">
-        <div class="bar-filled">
-          <div class="bar-point"></div>
+      <div class="storage">
+        <div class="card quota">
+          <span class="number">185</span>
+          <span>GB LEFT</span>
+        </div>
+        <div class="card detail">
+          <p>You’ve used <strong>815 GB</strong> of your storage</p>
+          <div class="bar">
+            <div class="bar-filled">
+              <div class="bar-point"></div>
+            </div>
+          </div>
+          <b>
+            <span class="limit-start">0 GB</span>
+            <span class="limit-end">1000 GB</span>
+          </b>
         </div>
       </div>
-      <b>
-        <span class="limit-start">0 GB</span>
-        <span class="limit-end">1000 GB</span>
-      </b>
-    </div>
-    <div class="card quota">
-      <span class="number">185</span>
-      <span>GB LEFT</span>
     </div>
     <div class="attribution">
       Challenge by
